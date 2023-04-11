@@ -1,10 +1,13 @@
 import streamlit as st
-
+import pdfkit
+import os
 from src.chatbot.chatgpt import openai_key_info, Chatgpt
 from src.chatbot.prompts import data_format
 from src.data_handler import improve_resume, init_resume, download_pdf, update_resume_data, PDFSizeException
 from src.exceptions import ChatbotInitException
 from src.utils import is_new_file, is_data_loaded, key_to_tab_name, get_item_key, init_user_info
+
+config = pdfkit.configuration(wkhtmltopdf='C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe')
 
 section_examples = {'summary': 'I have passion for new tech',
                     'workExperience': 'Tell about my ability to lead projects',
