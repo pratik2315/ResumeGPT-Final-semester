@@ -8,3 +8,5 @@ Back up deplyoment in case of errors: [link](https://huggingface.co/spaces/ofiko
 
 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
 
+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 (recent)
+
